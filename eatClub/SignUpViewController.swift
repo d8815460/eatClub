@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var titleLabel: UILabel!
     
@@ -32,21 +32,24 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var agreeButton: UIButton!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //直接改PFLoginViewController
+        /*直接改PFLoginViewController
         self.signUpView?.signUpButton?.setTitle("我同意並註冊", forState: .Normal)
         self.signUpView?.usernameField?.placeholder = "行動電話"
         self.signUpView?.usernameField?.keyboardType = UIKeyboardType.PhonePad
         self.signUpView?.passwordField?.placeholder = "設定密碼"
         self.signUpView?.emailField?.placeholder = "電子信箱"
+        */
         
-        
-        /* custom view
         bgImageView.image = UIImage(named: "nav-bg-2")
         bgImageView.contentMode = .ScaleAspectFill
         
@@ -98,10 +101,12 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
         //Looks for single or multiple taps.
         var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
-        */
+
     }
     
     override func viewDidLayoutSubviews() {
+        /*要使用Parse提供的註冊畫面才需要修改。
+
         let image = UIImage(named: "nav-bg-2")
         var bgView = UIImageView(image: image)
         self.signUpView?.addSubview(bgView)
@@ -156,6 +161,7 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
         textcontent.backgroundColor = UIColor.clearColor()
         
         self.signUpView?.addSubview(textcontent)
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -171,10 +177,11 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
     
     @IBAction func dismissButtonPressed(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
+        
     }
     
     //email鍵盤按下Go == 按下同意按鈕註冊
-    override func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.signUpWithUsernameAndPasswordPressed(self)
         return true
     }
@@ -201,8 +208,9 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
     }
     
     func processSignUp(){
-        self.signUpView?.signUpButton?.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+//        self.signUpView?.signUpButton?.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
         /* 自訂的UI才有 emailTextField
+        */
         if emailTextField.text.isEmpty {
             let alertController = UIAlertController(title: "註冊時發生錯誤",
                 message: "電子信箱忘記填寫",
@@ -236,10 +244,8 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
             if error == nil {
                 //註冊成功，讓我們開始使用這個App吧
                 
-                //開始轉場，看要轉到哪裡去，正常來講我們第一次註冊流程還有驗證，目前暫時取消畫面
-                self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                    
-                })
+                //開始轉場，看要轉到哪裡去，填寫基本資料
+                self.performSegueWithIdentifier("wProfile", sender: self)
             }else{
                 
                 self.activityIndicator.stopAnimating()
@@ -259,7 +265,6 @@ class SignUpViewController: PFSignUpViewController, UITextFieldDelegate {
                 }
             }
         }
-        */
     }
     
     /*

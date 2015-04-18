@@ -1,14 +1,14 @@
 //
-//  WriteMyProfileTableViewController.swift
+//  UploadProfilePhotoTableViewController.swift
 //  eatClub
 //
-//  Created by 駿逸 陳 on 2015/4/18.
+//  Created by 駿逸 陳 on 2015/4/19.
 //  Copyright (c) 2015年 miiitech. All rights reserved.
 //
 
 import UIKit
 
-class WriteMyProfileTableViewController: UITableViewController {
+class UploadProfilePhotoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +18,6 @@ class WriteMyProfileTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        self.navigationController?.navigationBarHidden = false
-//        self.title = "請輸入基本資料"
-        self.navigationItem.hidesBackButton = true
-        let label = UILabel()
-        label.backgroundColor = UIColor.clearColor()
-        label.font = UIFont.boldSystemFontOfSize(20.0)
-        label.shadowColor = UIColor(white: 0.0, alpha: 0.5)
-        label.textAlignment = NSTextAlignment.Center
-        label.textColor = UIColor.whiteColor()
-        self.navigationItem.titleView = label
-        label.text = "請輸入基本資料"
-        label.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {

@@ -37,8 +37,6 @@ class SignInViewController : PFLogInViewController, UITextFieldDelegate {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -46,16 +44,26 @@ class SignInViewController : PFLogInViewController, UITextFieldDelegate {
         self.logInView?.addSubview(facebookButton)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //直接改PFLoginViewController
         self.logInView?.passwordForgottenButton?.setTitle("忘記密碼？", forState: .Normal)
+        self.logInView?.passwordForgottenButton?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.logInView?.logInButton?.setTitle("登錄", forState: .Normal)
         self.logInView?.signUpButton?.setTitle("註冊", forState: .Normal)
         self.logInView?.usernameField?.placeholder = "行動電話"
         self.logInView?.usernameField?.keyboardType = UIKeyboardType.PhonePad
+        self.logInView?.usernameField?.font = UIFont(name: MegaTheme.fontName, size: 20)
+        self.logInView?.usernameField?.textColor = UIColor.whiteColor()
         self.logInView?.passwordField?.placeholder = "登錄密碼"
+        self.logInView?.passwordField?.font = UIFont(name: MegaTheme.fontName, size: 20)
+        self.logInView?.passwordField?.textColor = UIColor.whiteColor()
         self.logInView?.facebookButton?.setTitle("使用Facebook登錄", forState: .Normal)
         
         //如果要呼叫自己設計的忘記密碼頁面。
@@ -156,16 +164,42 @@ class SignInViewController : PFLogInViewController, UITextFieldDelegate {
         var Y_Co = (self.view.frame.size.height - 50 - 10)//距離底部高10px
         
         self.logInView?.facebookButton?.frame = CGRectMake(X_Co, Y_Co - 60, ButtonWidth, 50.0)
-        self.logInView?.signUpButton?.frame = CGRectMake(X_Co, Y_Co, ButtonWidth, 50.0)
+//        self.logInView?.signUpButton?.frame = CGRectMake(X_Co, Y_Co, ButtonWidth, 50.0)
         
-        self.logInView?.signUpButton?.setTitle("註冊一個新的", forState: .Normal)
+//        self.logInView?.signUpButton?.setTitle("註冊一個新的", forState: .Normal)
         self.logInView?.facebookButton?.setTitle("使用Facebook登錄", forState: .Normal)
+        self.logInView?.facebookButton?.titleLabel?.font = UIFont(name: MegaTheme.semiBoldFontName, size: 22)
         
         let image = UIImage(named: "nav-bg-2")
         var bgView = UIImageView(image: image)
         self.logInView?.addSubview(bgView)
         self.logInView?.sendSubviewToBack(bgView)
         
+        
+        //新增一個註冊的按鈕。
+        let SignInButton = UIButton()
+        SignInButton.frame = CGRectMake(X_Co, Y_Co, ButtonWidth, 50.0)
+        SignInButton.setTitle("註冊新的會員", forState: .Normal)
+        SignInButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        SignInButton.titleLabel?.font = UIFont(name: MegaTheme.semiBoldFontName, size: 22)
+        SignInButton.layer.borderWidth = 3
+        SignInButton.layer.borderColor = UIColor.whiteColor().CGColor
+        SignInButton.layer.cornerRadius = 5
+        SignInButton.addTarget(self, action: "signupButtonPressed:", forControlEvents: .TouchUpInside)
+        
+        self.logInView?.addSubview(SignInButton)
+        
+        let dismissBtn = UIButton()
+        dismissBtn.frame = CGRectMake(12.0, 45.0, 30.0, 30.0)
+        dismissBtn.setTitle("✕", forState: .Normal)
+        dismissBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        dismissBtn.titleLabel?.font = UIFont(name: MegaTheme.lighterFontName, size: 24)
+        dismissBtn.layer.borderWidth = 0.5
+        dismissBtn.layer.borderColor = UIColor.whiteColor().CGColor
+        dismissBtn.layer.cornerRadius = 15.0
+        dismissBtn.addTarget(self, action: "dismiss", forControlEvents: .TouchUpInside)
+        
+        self.logInView?.addSubview(dismissBtn)
         /*
         如果要安插新的Logo，就要指定相對應的位置及高度
         let logoimage = UIImage(named: "Logo")
@@ -200,7 +234,7 @@ class SignInViewController : PFLogInViewController, UITextFieldDelegate {
     }
     
     @IBAction func signupButtonPressed(sender: AnyObject) {
-        
+        self.performSegueWithIdentifier("signup", sender: self)
     }
     
     @IBAction func forgotPasswordButtonPressed(sender: AnyObject) {

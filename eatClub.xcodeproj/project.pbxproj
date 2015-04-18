@@ -17,6 +17,7 @@
 		DB00750D1AD55EFF0060CFA3 /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00750C1AD55EFF0060CFA3 /* RightMenuViewController.swift */; };
 		DB0075111AD55FAA0060CFA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0075101AD55FAA0060CFA3 /* HomeViewController.swift */; };
 		DB0075131AD560300060CFA3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0075121AD560300060CFA3 /* RootViewController.swift */; };
+		DB09F5071AE3165200E30419 /* UploadProfilePhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09F5061AE3165200E30419 /* UploadProfilePhotoTableViewController.swift */; };
 		DB0FC4641AD61D3E003CD064 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC4631AD61D3E003CD064 /* SignInViewController.swift */; };
 		DB0FC4671AD61EA4003CD064 /* PictureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC4661AD61EA4003CD064 /* PictureListViewController.swift */; };
 		DB0FC46A1AD62132003CD064 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC4691AD62132003CD064 /* PictureCell.swift */; };
@@ -82,6 +83,7 @@
 		DB00750C1AD55EFF0060CFA3 /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
 		DB0075101AD55FAA0060CFA3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DB0075121AD560300060CFA3 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DB09F5061AE3165200E30419 /* UploadProfilePhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadProfilePhotoTableViewController.swift; sourceTree = "<group>"; };
 		DB0FC4631AD61D3E003CD064 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DB0FC4661AD61EA4003CD064 /* PictureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureListViewController.swift; sourceTree = "<group>"; };
 		DB0FC4691AD62132003CD064 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
@@ -193,6 +195,14 @@
 			name = "左右兩邊的Menu";
 			sourceTree = "<group>";
 		};
+		DB09F5051AE3162C00E30419 /* 0.5上傳大頭照 */ = {
+			isa = PBXGroup;
+			children = (
+				DB09F5061AE3165200E30419 /* UploadProfilePhotoTableViewController.swift */,
+			);
+			name = "0.5上傳大頭照";
+			sourceTree = "<group>";
+		};
 		DB0FC4621AD61D33003CD064 /* 0.1登入畫面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +298,7 @@
 				FA880ED21ADCFDFE00E6E8ED /* 0.2註冊畫面 */,
 				DBBCA1551ADE7321002D27CE /* 0.3忘記密碼 */,
 				DBD1DCE61AE1D84700F4FD3F /* 0.4填寫基本資料 */,
+				DB09F5051AE3162C00E30419 /* 0.5上傳大頭照 */,
 				DB0075001AD55E530060CFA3 /* 左右兩邊的Menu */,
 				DB0074C71AD544460060CFA3 /* RMParallax */,
 				DB5B94CA1AD4D8F200E297D6 /* DRDynamicSlideShow */,
@@ -502,6 +513,7 @@
 				DB0075111AD55FAA0060CFA3 /* HomeViewController.swift in Sources */,
 				DB0FC46A1AD62132003CD064 /* PictureCell.swift in Sources */,
 				DB0075071AD55E7B0060CFA3 /* RECommonFunctions.m in Sources */,
+				DB09F5071AE3165200E30419 /* UploadProfilePhotoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

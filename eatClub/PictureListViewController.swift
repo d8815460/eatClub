@@ -66,23 +66,29 @@ class PictureListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("login2", sender: self)
+        self.performSegueWithIdentifier("login", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "login2"){
+        if (segue.identifier == "login"){
+            
+            var navi:UINavigationController = segue.destinationViewController as! UINavigationController
             
             
-            var view:PFLogInViewController = segue.destinationViewController as! PFLogInViewController
+            var view:PFLogInViewController = navi.viewControllers.first as! PFLogInViewController
             view.delegate = self
             view.facebookPermissions = ["public_profile", "email", "user_friends"]
-            view.fields = PFLogInFields.Facebook | PFLogInFields.UsernameAndPassword | PFLogInFields.SignUpButton | PFLogInFields.DismissButton | PFLogInFields.PasswordForgotten
+            view.fields = PFLogInFields.Facebook | PFLogInFields.UsernameAndPassword  | PFLogInFields.PasswordForgotten | PFLogInFields.DismissButton
             
-            var signUp:PFSignUpViewController = SignUpViewController()
-            signUp.delegate = self
-            signUp.fields = PFSignUpFields.Default
+//            navi.setViewControllers([view], animated: false)
             
-            view.signUpController = signUp
+            //用自定義的註冊畫面
+//            var signUp:PFSignUpViewController = SignUpViewController()
+//            signUp.delegate = self
+//            signUp.fields = PFSignUpFields.Default
+//            view.signUpController = signUp
+        }else if (segue.identifier == "wProfile"){
+            //轉頁到輸入基本資料頁面
         }
     }
     
@@ -90,7 +96,8 @@ class PictureListViewController: UIViewController, UITableViewDelegate, UITableV
     //SignUp Delegate
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         //如果成功註冊一個新的帳號，就要轉場到基本資料填寫頁面
-        
+        println("哈哈哈")
+        self.performSegueWithIdentifier("wProfile", sender: self)
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
