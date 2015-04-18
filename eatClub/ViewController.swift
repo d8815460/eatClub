@@ -48,7 +48,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
 
     //MARK: Parse 登入
-    func logInViewController(logInController: PFLogInViewController!, shouldBeginLogInWithUsername username: String!, password: String!) -> Bool {
+    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
         if (!username.isEmpty || !password.isEmpty) {
             return true
         }else{
@@ -56,29 +56,29 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         }
     }
     
-    func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         
     }
     
-    func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {
+    func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
         println("Failed to login")
     }
     
     
     //MARK: Parse 註冊
-    func signUpViewController(signUpController: PFSignUpViewController!, shouldBeginSignUp info: [NSObject : AnyObject]!) -> Bool {
+    func signUpViewController(signUpController: PFSignUpViewController, shouldBeginSignUp info: [NSObject : AnyObject]) -> Bool {
         return true
     }
     
-    func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func signUpViewController(signUpController: PFSignUpViewController!, didFailToSignUpWithError error: NSError!) {
+    func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
         println("Failed to signup....")
     }
     
-    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController!) {
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
         println("User dismissed sign up.")
     }
     

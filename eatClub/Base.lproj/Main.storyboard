@@ -36,32 +36,6 @@
             </objects>
             <point key="canvasLocation" x="1165" y="-476.99999999999989"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="fi2-bA-XJz">
-            <objects>
-                <tableViewController id="GCn-7y-irM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XWu-1H-45d">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="caX-Bw-gqz">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="caX-Bw-gqz" id="R2c-ap-0jT">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GCn-7y-irM" id="zqF-KC-vaB"/>
-                            <outlet property="delegate" destination="GCn-7y-irM" id="g9G-rM-0Pe"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P7m-Cf-Yjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1811" y="-476.99999999999989"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="h7d-5B-w0W">
             <objects>
@@ -921,32 +895,6 @@ It takes just 1 line of code per animation!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpb-7O-hVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3165" y="-1183"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="pNO-ah-81D">
-            <objects>
-                <tableViewController id="pBb-Gl-WSk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LX1-yW-2Rg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TZo-wh-UdC">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TZo-wh-UdC" id="J3D-C8-gCm">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pBb-Gl-WSk" id="27p-76-f4L"/>
-                            <outlet property="delegate" destination="pBb-Gl-WSk" id="iOA-1L-SdV"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kWr-Jc-71m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1811" y="-2146"/>
         </scene>
         <!--Picture List View Controller-->
         <scene sceneID="AWM-77-OEg">
