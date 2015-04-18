@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>58E4F280-50ED-4DCC-BBB3-D048AFE2C589</string>
+	<key>IDESourceControlProjectName</key>
+	<string>eatClub</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>44764A9C96392D7DB6C604903CC0B37139C78E6E</key>
+		<string>https://github.com/miiitech/eatClub.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>eatClub.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>44764A9C96392D7DB6C604903CC0B37139C78E6E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/miiitech/eatClub.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>44764A9C96392D7DB6C604903CC0B37139C78E6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>44764A9C96392D7DB6C604903CC0B37139C78E6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eatClub</string>
+		</dict>
+	</array>
+</dict>
+</plist>

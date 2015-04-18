@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB0074CA1AD544570060CFA3 /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0074C81AD544570060CFA3 /* RMParallaxItem.swift */; };
+		DB0074CB1AD544570060CFA3 /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0074C91AD544570060CFA3 /* RMParallax.swift */; };
+		DB0074FF1AD54D630060CFA3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0074FE1AD54D630060CFA3 /* IntroViewController.swift */; };
+		DB0075071AD55E7B0060CFA3 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0075021AD55E7B0060CFA3 /* RECommonFunctions.m */; };
+		DB0075081AD55E7B0060CFA3 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0075041AD55E7B0060CFA3 /* RESideMenu.m */; };
+		DB0075091AD55E7B0060CFA3 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0075061AD55E7B0060CFA3 /* UIViewController+RESideMenu.m */; };
+		DB00750B1AD55EF20060CFA3 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00750A1AD55EF20060CFA3 /* LeftMenuViewController.swift */; };
+		DB00750D1AD55EFF0060CFA3 /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00750C1AD55EFF0060CFA3 /* RightMenuViewController.swift */; };
+		DB0075111AD55FAA0060CFA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0075101AD55FAA0060CFA3 /* HomeViewController.swift */; };
+		DB0075131AD560300060CFA3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0075121AD560300060CFA3 /* RootViewController.swift */; };
+		DB0FC4641AD61D3E003CD064 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC4631AD61D3E003CD064 /* SignInViewController.swift */; };
+		DB0FC4671AD61EA4003CD064 /* PictureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC4661AD61EA4003CD064 /* PictureListViewController.swift */; };
+		DB0FC46A1AD62132003CD064 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC4691AD62132003CD064 /* PictureCell.swift */; };
+		DB0FC46D1AD62157003CD064 /* MegaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FC46C1AD62157003CD064 /* MegaTheme.swift */; };
+		DB5B94CD1AD4D90F00E297D6 /* DRDynamicSlideShow.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5B94CC1AD4D90F00E297D6 /* DRDynamicSlideShow.m */; };
+		DBBCA1571ADE7345002D27CE /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA1561ADE7345002D27CE /* ForgotPasswordViewController.swift */; };
+		DBBCA15D1ADE87A9002D27CE /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1581ADE87A9002D27CE /* FBAudienceNetwork.framework */; };
+		DBBCA15E1ADE87A9002D27CE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1591ADE87A9002D27CE /* FBSDKCoreKit.framework */; };
+		DBBCA15F1ADE87A9002D27CE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA15A1ADE87A9002D27CE /* FBSDKLoginKit.framework */; };
+		DBBCA1601ADE87A9002D27CE /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA15B1ADE87A9002D27CE /* FBSDKMessengerShareKit.framework */; };
+		DBBCA1611ADE87A9002D27CE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA15C1ADE87A9002D27CE /* FBSDKShareKit.framework */; };
+		DBBCA1691ADE8873002D27CE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1641ADE8873002D27CE /* Bolts.framework */; };
+		DBBCA16A1ADE8873002D27CE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1651ADE8873002D27CE /* Parse.framework */; };
+		DBBCA16D1ADE8873002D27CE /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1681ADE8873002D27CE /* ParseUI.framework */; };
+		DBBCA1711ADE8DE0002D27CE /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1701ADE8DE0002D27CE /* ParseFacebookUtilsV4.framework */; };
+		DBBCA1751ADE8F97002D27CE /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1741ADE8F97002D27CE /* ParseFacebookUtils.framework */; };
+		DBBCA1771ADE933C002D27CE /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1761ADE933C002D27CE /* ParseCrashReporting.framework */; };
+		DBBCA1791ADE9526002D27CE /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1781ADE9526002D27CE /* libstdc++.6.dylib */; };
+		DBD1DCE81AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD1DCE71AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift */; };
+		FA04B2FD1AC2BD260033AB2A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA04B2FC1AC2BD260033AB2A /* Social.framework */; };
+		FA880ED41ADD006400E6E8ED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880ED31ADD006400E6E8ED /* SignUpViewController.swift */; };
+		FAAF426A1ABFE2FD0005515B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF42691ABFE2FD0005515B /* AppDelegate.swift */; };
+		FAAF426D1ABFE2FD0005515B /* eatClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAAF426B1ABFE2FD0005515B /* eatClub.xcdatamodeld */; };
+		FAAF426F1ABFE2FD0005515B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF426E1ABFE2FD0005515B /* ViewController.swift */; };
+		FAAF42721ABFE2FD0005515B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF42701ABFE2FD0005515B /* Main.storyboard */; };
+		FAAF42741ABFE2FD0005515B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAF42731ABFE2FD0005515B /* Images.xcassets */; };
+		FAAF42771ABFE2FD0005515B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAF42751ABFE2FD0005515B /* LaunchScreen.xib */; };
+		FAAF42831ABFE2FD0005515B /* eatClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF42821ABFE2FD0005515B /* eatClubTests.swift */; };
+		FAAF428D1ABFE3E70005515B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF428C1ABFE3E70005515B /* libsqlite3.dylib */; };
+		FAAF428F1ABFE3EF0005515B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF428E1ABFE3EF0005515B /* SystemConfiguration.framework */; };
+		FAAF42911ABFE3F50005515B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF42901ABFE3F50005515B /* StoreKit.framework */; };
+		FAAF42931ABFE3FC0005515B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF42921ABFE3FC0005515B /* Security.framework */; };
+		FAAF42951ABFE4030005515B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF42941ABFE4030005515B /* QuartzCore.framework */; };
+		FAAF42971ABFE40A0005515B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF42961ABFE40A0005515B /* MobileCoreServices.framework */; };
+		FAAF42991ABFE4130005515B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF42981ABFE4130005515B /* libz.dylib */; };
+		FAAF429B1ABFE4190005515B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF429A1ABFE4190005515B /* CoreLocation.framework */; };
+		FAAF429D1ABFE4210005515B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF429C1ABFE4210005515B /* CoreGraphics.framework */; };
+		FAAF429F1ABFE4280005515B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF429E1ABFE4280005515B /* CFNetwork.framework */; };
+		FAAF42A11ABFE4330005515B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF42A01ABFE4330005515B /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAAF427D1ABFE2FD0005515B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAF425C1ABFE2FD0005515B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAF42631ABFE2FD0005515B;
+			remoteInfo = eatClub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB0074C81AD544570060CFA3 /* RMParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallaxItem.swift; sourceTree = "<group>"; };
+		DB0074C91AD544570060CFA3 /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallax.swift; sourceTree = "<group>"; };
+		DB0074FE1AD54D630060CFA3 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		DB0075011AD55E7B0060CFA3 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		DB0075021AD55E7B0060CFA3 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		DB0075031AD55E7B0060CFA3 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		DB0075041AD55E7B0060CFA3 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		DB0075051AD55E7B0060CFA3 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		DB0075061AD55E7B0060CFA3 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		DB00750A1AD55EF20060CFA3 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		DB00750C1AD55EFF0060CFA3 /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
+		DB0075101AD55FAA0060CFA3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DB0075121AD560300060CFA3 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DB0FC4631AD61D3E003CD064 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DB0FC4661AD61EA4003CD064 /* PictureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureListViewController.swift; sourceTree = "<group>"; };
+		DB0FC4691AD62132003CD064 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
+		DB0FC46C1AD62157003CD064 /* MegaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MegaTheme.swift; sourceTree = "<group>"; };
+		DB5B94CB1AD4D90F00E297D6 /* DRDynamicSlideShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDynamicSlideShow.h; sourceTree = "<group>"; };
+		DB5B94CC1AD4D90F00E297D6 /* DRDynamicSlideShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRDynamicSlideShow.m; sourceTree = "<group>"; };
+		DBBCA1561ADE7345002D27CE /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		DBBCA1581ADE87A9002D27CE /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		DBBCA1591ADE87A9002D27CE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DBBCA15A1ADE87A9002D27CE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DBBCA15B1ADE87A9002D27CE /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		DBBCA15C1ADE87A9002D27CE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		DBBCA1641ADE8873002D27CE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DBBCA1651ADE8873002D27CE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DBBCA1681ADE8873002D27CE /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		DBBCA1701ADE8DE0002D27CE /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		DBBCA1741ADE8F97002D27CE /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		DBBCA1761ADE933C002D27CE /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		DBBCA1781ADE9526002D27CE /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		DBD1DCE71AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMyProfileTableViewController.swift; sourceTree = "<group>"; };
+		FA04B2FC1AC2BD260033AB2A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FA880ED31ADD006400E6E8ED /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FAAF42641ABFE2FD0005515B /* eatClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAF42681ABFE2FD0005515B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAF42691ABFE2FD0005515B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAAF426C1ABFE2FD0005515B /* eatClub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eatClub.xcdatamodel; sourceTree = "<group>"; };
+		FAAF426E1ABFE2FD0005515B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAAF42711ABFE2FD0005515B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAAF42731ABFE2FD0005515B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAAF42761ABFE2FD0005515B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FAAF427C1ABFE2FD0005515B /* eatClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eatClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAF42811ABFE2FD0005515B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAF42821ABFE2FD0005515B /* eatClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatClubTests.swift; sourceTree = "<group>"; };
+		FAAF428C1ABFE3E70005515B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		FAAF428E1ABFE3EF0005515B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAAF42901ABFE3F50005515B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FAAF42921ABFE3FC0005515B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAAF42941ABFE4030005515B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAAF42961ABFE40A0005515B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FAAF42981ABFE4130005515B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FAAF429A1ABFE4190005515B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAAF429C1ABFE4210005515B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FAAF429E1ABFE4280005515B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FAAF42A01ABFE4330005515B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FAAF42AD1ABFE59F0005515B /* eatClub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eatClub-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAAF42611ABFE2FD0005515B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBCA16D1ADE8873002D27CE /* ParseUI.framework in Frameworks */,
+				FA04B2FD1AC2BD260033AB2A /* Social.framework in Frameworks */,
+				DBBCA15F1ADE87A9002D27CE /* FBSDKLoginKit.framework in Frameworks */,
+				DBBCA1611ADE87A9002D27CE /* FBSDKShareKit.framework in Frameworks */,
+				DBBCA1771ADE933C002D27CE /* ParseCrashReporting.framework in Frameworks */,
+				DBBCA15E1ADE87A9002D27CE /* FBSDKCoreKit.framework in Frameworks */,
+				DBBCA1711ADE8DE0002D27CE /* ParseFacebookUtilsV4.framework in Frameworks */,
+				DBBCA1601ADE87A9002D27CE /* FBSDKMessengerShareKit.framework in Frameworks */,
+				DBBCA1751ADE8F97002D27CE /* ParseFacebookUtils.framework in Frameworks */,
+				DBBCA16A1ADE8873002D27CE /* Parse.framework in Frameworks */,
+				DBBCA15D1ADE87A9002D27CE /* FBAudienceNetwork.framework in Frameworks */,
+				DBBCA1691ADE8873002D27CE /* Bolts.framework in Frameworks */,
+				FAAF42A11ABFE4330005515B /* AudioToolbox.framework in Frameworks */,
+				FAAF429F1ABFE4280005515B /* CFNetwork.framework in Frameworks */,
+				FAAF429D1ABFE4210005515B /* CoreGraphics.framework in Frameworks */,
+				FAAF429B1ABFE4190005515B /* CoreLocation.framework in Frameworks */,
+				FAAF42971ABFE40A0005515B /* MobileCoreServices.framework in Frameworks */,
+				FAAF42951ABFE4030005515B /* QuartzCore.framework in Frameworks */,
+				FAAF42931ABFE3FC0005515B /* Security.framework in Frameworks */,
+				FAAF42911ABFE3F50005515B /* StoreKit.framework in Frameworks */,
+				FAAF428F1ABFE3EF0005515B /* SystemConfiguration.framework in Frameworks */,
+				DBBCA1791ADE9526002D27CE /* libstdc++.6.dylib in Frameworks */,
+				FAAF42991ABFE4130005515B /* libz.dylib in Frameworks */,
+				FAAF428D1ABFE3E70005515B /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAF42791ABFE2FD0005515B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB0074C71AD544460060CFA3 /* RMParallax */ = {
+			isa = PBXGroup;
+			children = (
+				DB0074C81AD544570060CFA3 /* RMParallaxItem.swift */,
+				DB0074C91AD544570060CFA3 /* RMParallax.swift */,
+			);
+			name = RMParallax;
+			sourceTree = "<group>";
+		};
+		DB0075001AD55E530060CFA3 /* 左右兩邊的Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DB0075011AD55E7B0060CFA3 /* RECommonFunctions.h */,
+				DB0075021AD55E7B0060CFA3 /* RECommonFunctions.m */,
+				DB0075031AD55E7B0060CFA3 /* RESideMenu.h */,
+				DB0075041AD55E7B0060CFA3 /* RESideMenu.m */,
+				DB0075051AD55E7B0060CFA3 /* UIViewController+RESideMenu.h */,
+				DB0075061AD55E7B0060CFA3 /* UIViewController+RESideMenu.m */,
+			);
+			name = "左右兩邊的Menu";
+			sourceTree = "<group>";
+		};
+		DB0FC4621AD61D33003CD064 /* 0.1登入畫面 */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FC4631AD61D3E003CD064 /* SignInViewController.swift */,
+			);
+			name = "0.1登入畫面";
+			sourceTree = "<group>";
+		};
+		DB0FC4651AD61E9A003CD064 /* 0.0首頁 */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FC4681AD62127003CD064 /* Cells */,
+				DB0FC4661AD61EA4003CD064 /* PictureListViewController.swift */,
+			);
+			name = "0.0首頁";
+			sourceTree = "<group>";
+		};
+		DB0FC4681AD62127003CD064 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FC4691AD62132003CD064 /* PictureCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DB0FC46B1AD62146003CD064 /* 佈景主題 */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FC46C1AD62157003CD064 /* MegaTheme.swift */,
+			);
+			name = "佈景主題";
+			sourceTree = "<group>";
+		};
+		DB5B94CA1AD4D8F200E297D6 /* DRDynamicSlideShow */ = {
+			isa = PBXGroup;
+			children = (
+				DB5B94CB1AD4D90F00E297D6 /* DRDynamicSlideShow.h */,
+				DB5B94CC1AD4D90F00E297D6 /* DRDynamicSlideShow.m */,
+			);
+			name = DRDynamicSlideShow;
+			sourceTree = "<group>";
+		};
+		DBBCA1551ADE7321002D27CE /* 0.3忘記密碼 */ = {
+			isa = PBXGroup;
+			children = (
+				DBBCA1561ADE7345002D27CE /* ForgotPasswordViewController.swift */,
+			);
+			name = "0.3忘記密碼";
+			sourceTree = "<group>";
+		};
+		DBD1DCE61AE1D84700F4FD3F /* 0.4填寫基本資料 */ = {
+			isa = PBXGroup;
+			children = (
+				DBD1DCE71AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift */,
+			);
+			name = "0.4填寫基本資料";
+			sourceTree = "<group>";
+		};
+		FA880ED21ADCFDFE00E6E8ED /* 0.2註冊畫面 */ = {
+			isa = PBXGroup;
+			children = (
+				FA880ED31ADD006400E6E8ED /* SignUpViewController.swift */,
+			);
+			name = "0.2註冊畫面";
+			sourceTree = "<group>";
+		};
+		FAAF425B1ABFE2FD0005515B = {
+			isa = PBXGroup;
+			children = (
+				DBBCA1781ADE9526002D27CE /* libstdc++.6.dylib */,
+				FAAF42661ABFE2FD0005515B /* eatClub */,
+				FAAF42A21ABFE44F0005515B /* framework */,
+				FAAF427F1ABFE2FD0005515B /* eatClubTests */,
+				FAAF42651ABFE2FD0005515B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAAF42651ABFE2FD0005515B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF42641ABFE2FD0005515B /* eatClub.app */,
+				FAAF427C1ABFE2FD0005515B /* eatClubTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAAF42661ABFE2FD0005515B /* eatClub */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FC46B1AD62146003CD064 /* 佈景主題 */,
+				DB0FC4651AD61E9A003CD064 /* 0.0首頁 */,
+				DB0FC4621AD61D33003CD064 /* 0.1登入畫面 */,
+				FA880ED21ADCFDFE00E6E8ED /* 0.2註冊畫面 */,
+				DBBCA1551ADE7321002D27CE /* 0.3忘記密碼 */,
+				DBD1DCE61AE1D84700F4FD3F /* 0.4填寫基本資料 */,
+				DB0075001AD55E530060CFA3 /* 左右兩邊的Menu */,
+				DB0074C71AD544460060CFA3 /* RMParallax */,
+				DB5B94CA1AD4D8F200E297D6 /* DRDynamicSlideShow */,
+				FAAF42691ABFE2FD0005515B /* AppDelegate.swift */,
+				DB0075121AD560300060CFA3 /* RootViewController.swift */,
+				FAAF426E1ABFE2FD0005515B /* ViewController.swift */,
+				DB0075101AD55FAA0060CFA3 /* HomeViewController.swift */,
+				DB0074FE1AD54D630060CFA3 /* IntroViewController.swift */,
+				DB00750A1AD55EF20060CFA3 /* LeftMenuViewController.swift */,
+				DB00750C1AD55EFF0060CFA3 /* RightMenuViewController.swift */,
+				FAAF42701ABFE2FD0005515B /* Main.storyboard */,
+				FAAF42731ABFE2FD0005515B /* Images.xcassets */,
+				FAAF42751ABFE2FD0005515B /* LaunchScreen.xib */,
+				FAAF426B1ABFE2FD0005515B /* eatClub.xcdatamodeld */,
+				FAAF42671ABFE2FD0005515B /* Supporting Files */,
+			);
+			path = eatClub;
+			sourceTree = "<group>";
+		};
+		FAAF42671ABFE2FD0005515B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF42AD1ABFE59F0005515B /* eatClub-Bridging-Header.h */,
+				FAAF42681ABFE2FD0005515B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAAF427F1ABFE2FD0005515B /* eatClubTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF42821ABFE2FD0005515B /* eatClubTests.swift */,
+				FAAF42801ABFE2FD0005515B /* Supporting Files */,
+			);
+			path = eatClubTests;
+			sourceTree = "<group>";
+		};
+		FAAF42801ABFE2FD0005515B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF42811ABFE2FD0005515B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAAF42A21ABFE44F0005515B /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				DBBCA1741ADE8F97002D27CE /* ParseFacebookUtils.framework */,
+				DBBCA1701ADE8DE0002D27CE /* ParseFacebookUtilsV4.framework */,
+				DBBCA1641ADE8873002D27CE /* Bolts.framework */,
+				DBBCA1651ADE8873002D27CE /* Parse.framework */,
+				DBBCA1761ADE933C002D27CE /* ParseCrashReporting.framework */,
+				DBBCA1681ADE8873002D27CE /* ParseUI.framework */,
+				DBBCA1581ADE87A9002D27CE /* FBAudienceNetwork.framework */,
+				DBBCA1591ADE87A9002D27CE /* FBSDKCoreKit.framework */,
+				DBBCA15A1ADE87A9002D27CE /* FBSDKLoginKit.framework */,
+				DBBCA15B1ADE87A9002D27CE /* FBSDKMessengerShareKit.framework */,
+				DBBCA15C1ADE87A9002D27CE /* FBSDKShareKit.framework */,
+				FA04B2FC1AC2BD260033AB2A /* Social.framework */,
+				FAAF42A01ABFE4330005515B /* AudioToolbox.framework */,
+				FAAF429E1ABFE4280005515B /* CFNetwork.framework */,
+				FAAF429C1ABFE4210005515B /* CoreGraphics.framework */,
+				FAAF429A1ABFE4190005515B /* CoreLocation.framework */,
+				FAAF42981ABFE4130005515B /* libz.dylib */,
+				FAAF42961ABFE40A0005515B /* MobileCoreServices.framework */,
+				FAAF42941ABFE4030005515B /* QuartzCore.framework */,
+				FAAF42921ABFE3FC0005515B /* Security.framework */,
+				FAAF42901ABFE3F50005515B /* StoreKit.framework */,
+				FAAF428E1ABFE3EF0005515B /* SystemConfiguration.framework */,
+				FAAF428C1ABFE3E70005515B /* libsqlite3.dylib */,
+			);
+			name = framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAAF42631ABFE2FD0005515B /* eatClub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAF42861ABFE2FD0005515B /* Build configuration list for PBXNativeTarget "eatClub" */;
+			buildPhases = (
+				FAAF42601ABFE2FD0005515B /* Sources */,
+				FAAF42611ABFE2FD0005515B /* Frameworks */,
+				FAAF42621ABFE2FD0005515B /* Resources */,
+				DBBCA17A1ADE980A002D27CE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eatClub;
+			productName = eatClub;
+			productReference = FAAF42641ABFE2FD0005515B /* eatClub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAAF427B1ABFE2FD0005515B /* eatClubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAF42891ABFE2FD0005515B /* Build configuration list for PBXNativeTarget "eatClubTests" */;
+			buildPhases = (
+				FAAF42781ABFE2FD0005515B /* Sources */,
+				FAAF42791ABFE2FD0005515B /* Frameworks */,
+				FAAF427A1ABFE2FD0005515B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAF427E1ABFE2FD0005515B /* PBXTargetDependency */,
+			);
+			name = eatClubTests;
+			productName = eatClubTests;
+			productReference = FAAF427C1ABFE2FD0005515B /* eatClubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAAF425C1ABFE2FD0005515B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = miiitech;
+				TargetAttributes = {
+					FAAF42631ABFE2FD0005515B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FAAF427B1ABFE2FD0005515B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = FAAF42631ABFE2FD0005515B;
+					};
+				};
+			};
+			buildConfigurationList = FAAF425F1ABFE2FD0005515B /* Build configuration list for PBXProject "eatClub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAAF425B1ABFE2FD0005515B;
+			productRefGroup = FAAF42651ABFE2FD0005515B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAAF42631ABFE2FD0005515B /* eatClub */,
+				FAAF427B1ABFE2FD0005515B /* eatClubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAAF42621ABFE2FD0005515B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAF42721ABFE2FD0005515B /* Main.storyboard in Resources */,
+				FAAF42771ABFE2FD0005515B /* LaunchScreen.xib in Resources */,
+				FAAF42741ABFE2FD0005515B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAF427A1ABFE2FD0005515B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBBCA17A1ADE980A002D27CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=/usr/local/bin:$PATH\ncd parse\n\nparse symbols -p \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAAF42601ABFE2FD0005515B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5B94CD1AD4D90F00E297D6 /* DRDynamicSlideShow.m in Sources */,
+				DB0FC4671AD61EA4003CD064 /* PictureListViewController.swift in Sources */,
+				DB0074CB1AD544570060CFA3 /* RMParallax.swift in Sources */,
+				DB0074FF1AD54D630060CFA3 /* IntroViewController.swift in Sources */,
+				DBD1DCE81AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift in Sources */,
+				DB0074CA1AD544570060CFA3 /* RMParallaxItem.swift in Sources */,
+				FAAF426F1ABFE2FD0005515B /* ViewController.swift in Sources */,
+				FAAF426D1ABFE2FD0005515B /* eatClub.xcdatamodeld in Sources */,
+				FA880ED41ADD006400E6E8ED /* SignUpViewController.swift in Sources */,
+				FAAF426A1ABFE2FD0005515B /* AppDelegate.swift in Sources */,
+				DB00750B1AD55EF20060CFA3 /* LeftMenuViewController.swift in Sources */,
+				DB0FC4641AD61D3E003CD064 /* SignInViewController.swift in Sources */,
+				DB0075091AD55E7B0060CFA3 /* UIViewController+RESideMenu.m in Sources */,
+				DB0075081AD55E7B0060CFA3 /* RESideMenu.m in Sources */,
+				DB0075131AD560300060CFA3 /* RootViewController.swift in Sources */,
+				DB0FC46D1AD62157003CD064 /* MegaTheme.swift in Sources */,
+				DB00750D1AD55EFF0060CFA3 /* RightMenuViewController.swift in Sources */,
+				DBBCA1571ADE7345002D27CE /* ForgotPasswordViewController.swift in Sources */,
+				DB0075111AD55FAA0060CFA3 /* HomeViewController.swift in Sources */,
+				DB0FC46A1AD62132003CD064 /* PictureCell.swift in Sources */,
+				DB0075071AD55E7B0060CFA3 /* RECommonFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAF42781ABFE2FD0005515B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAF42831ABFE2FD0005515B /* eatClubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAAF427E1ABFE2FD0005515B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAF42631ABFE2FD0005515B /* eatClub */;
+			targetProxy = FAAF427D1ABFE2FD0005515B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAAF42701ABFE2FD0005515B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAF42711ABFE2FD0005515B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAAF42751ABFE2FD0005515B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAF42761ABFE2FD0005515B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAAF42841ABFE2FD0005515B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAAF42851ABFE2FD0005515B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAAF42871ABFE2FD0005515B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = eatClub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "eatClub-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAAF42881ABFE2FD0005515B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = eatClub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "eatClub-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		FAAF428A1ABFE2FD0005515B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eatClubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eatClub.app/eatClub";
+			};
+			name = Debug;
+		};
+		FAAF428B1ABFE2FD0005515B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eatClubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eatClub.app/eatClub";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAAF425F1ABFE2FD0005515B /* Build configuration list for PBXProject "eatClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAF42841ABFE2FD0005515B /* Debug */,
+				FAAF42851ABFE2FD0005515B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAF42861ABFE2FD0005515B /* Build configuration list for PBXNativeTarget "eatClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAF42871ABFE2FD0005515B /* Debug */,
+				FAAF42881ABFE2FD0005515B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAF42891ABFE2FD0005515B /* Build configuration list for PBXNativeTarget "eatClubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAF428A1ABFE2FD0005515B /* Debug */,
+				FAAF428B1ABFE2FD0005515B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAAF426B1ABFE2FD0005515B /* eatClub.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAAF426C1ABFE2FD0005515B /* eatClub.xcdatamodel */,
+			);
+			currentVersion = FAAF426C1ABFE2FD0005515B /* eatClub.xcdatamodel */;
+			path = eatClub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FAAF425C1ABFE2FD0005515B /* Project object */;
+}
