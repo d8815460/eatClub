@@ -8,8 +8,21 @@
 
 import UIKit
 
-class WriteMyProfileTableViewController: UITableViewController {
+class WriteMyProfileTableViewController: UITableViewController, UITextFieldDelegate {
 
+    
+    @IBOutlet var firstNameField: UITextField!
+    @IBOutlet var lastNameField: UITextField!
+    @IBOutlet var workField: UITextField!
+    @IBOutlet var livePlaceLabel: UILabel!
+    @IBOutlet var genderLabel: UILabel!
+    @IBOutlet var birthdayLabel: UILabel!
+    @IBOutlet var heightLabel: UILabel!
+    @IBOutlet var educationalLabel: UILabel!
+    @IBOutlet var emotionalStatusLabel: UILabel!
+    @IBOutlet var nextButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,8 +32,15 @@ class WriteMyProfileTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        nextButton.hidden = true
+        
+        lastNameField.tag = 100
+        firstNameField.tag = 101
+        workField.tag = 102
+        
+        
+        
         self.navigationController?.navigationBarHidden = false
-//        self.title = "請輸入基本資料"
         self.navigationItem.hidesBackButton = true
         let label = UILabel()
         label.backgroundColor = UIColor.clearColor()
@@ -37,6 +57,34 @@ class WriteMyProfileTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        println("textfield tag = \(textField.tag)")
+        if textField.tag == 100 {
+            //跳下一個，名字
+            firstNameField.becomeFirstResponder()
+            
+        }else if textField.tag == 101 {
+            //跳下一個，職業
+            firstNameField.resignFirstResponder()
+            workField.becomeFirstResponder()
+            
+        }else if textField.tag == 102 {
+            //跳居住地，選擇模式，等同於選擇 table cell = index 3
+            workField.resignFirstResponder()
+            let index3 = NSIndexPath(forRow: 0, inSection: 3)
+            tableView(self.tableView, didSelectRowAtIndexPath: index3)
+            
+            nextButton.hidden = false
+            
+        }
+        
+        return true
+    }
+    
+    
 
     // MARK: - Table view data source
 

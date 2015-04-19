@@ -27,27 +27,53 @@ class UploadProfilePhotoTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Potentially incomplete method implementation.
-//        // Return the number of sections.
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete method implementation.
-//        // Return the number of rows in the section.
-//        return 0
-//    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 1
+    }
 
-    /*
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 3
+    }
+
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
+        var cell: UITableViewCell!
+        
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCellWithIdentifier("photoCell", forIndexPath: indexPath) as! UITableViewCell
+        }else if indexPath.row == 1{
+            cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+            cell.textLabel?.text = "外表的形容"
+            cell.accessoryType = UITableViewCellAccessoryType.DetailDisclosureButton
+        }else if indexPath.row == 2{
+            cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+            cell.textLabel?.text = "最滿意的部位"
+            cell.accessoryType = UITableViewCellAccessoryType.DetailDisclosureButton
+        }
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
+        if row == 0 {
+            //上傳大頭照
+        }else if row == 1 {
+            //外表的形容
+        }else if row == 2 {
+            //最滿意的部位
+        }else{
+            
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
