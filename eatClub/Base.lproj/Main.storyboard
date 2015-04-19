@@ -1289,37 +1289,40 @@ It takes just 1 line of code per animation!</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Y4C-HE-2NB">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="kb8-QG-nPp">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y4C-HE-2NB" id="I7D-6x-T2h">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kb8-QG-nPp" id="txQ-Fk-AJj">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="職業" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-sL-e3a">
-                                                    <rect key="frame" x="14" y="0.0" width="34" height="59"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請輸入" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7c-DQ-iUJ">
+                                                    <rect key="frame" x="64" y="10" width="504" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="59" id="I4g-wN-eOC"/>
+                                                        <constraint firstAttribute="height" constant="40" id="jyW-We-EgV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="職業" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hG7-ly-DFf">
+                                                    <rect key="frame" x="14" y="0.0" width="42" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="Tih-aL-pk2"/>
+                                                        <constraint firstAttribute="width" constant="42" id="yCa-Ru-jMe"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請輸入" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tv5-7s-omf">
-                                                    <rect key="frame" x="64" y="10" width="504" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="3lE-7n-BbB"/>
-                                                        <constraint firstAttribute="width" constant="504" id="LR5-ge-aWR"/>
-                                                        <constraint firstAttribute="height" constant="40" id="TGN-nm-2Gr"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dbC-sL-e3a" firstAttribute="leading" secondItem="I7D-6x-T2h" secondAttribute="leadingMargin" constant="6" id="9Is-fN-zMn"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="tv5-7s-omf" secondAttribute="trailing" constant="24" id="gZC-6g-Za6"/>
-                                                <constraint firstItem="dbC-sL-e3a" firstAttribute="top" secondItem="I7D-6x-T2h" secondAttribute="top" id="tlx-Yg-lip"/>
-                                                <constraint firstItem="tv5-7s-omf" firstAttribute="leading" secondItem="dbC-sL-e3a" secondAttribute="trailing" constant="16" id="v7V-pv-SPQ"/>
-                                                <constraint firstItem="tv5-7s-omf" firstAttribute="top" secondItem="I7D-6x-T2h" secondAttribute="topMargin" constant="2" id="xQd-UA-95P"/>
+                                                <constraint firstItem="j7c-DQ-iUJ" firstAttribute="leading" secondItem="hG7-ly-DFf" secondAttribute="trailing" constant="8" id="Iv0-a5-j9v"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hG7-ly-DFf" secondAttribute="bottom" constant="-8" id="Jjf-eq-IiK"/>
+                                                <constraint firstItem="j7c-DQ-iUJ" firstAttribute="top" secondItem="txQ-Fk-AJj" secondAttribute="topMargin" constant="2" id="SfA-H9-iKA"/>
+                                                <constraint firstItem="hG7-ly-DFf" firstAttribute="top" secondItem="txQ-Fk-AJj" secondAttribute="topMargin" constant="-8" id="T6P-fW-U1l"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="j7c-DQ-iUJ" secondAttribute="bottom" constant="1" id="gOz-ja-goD"/>
+                                                <constraint firstAttribute="centerY" secondItem="j7c-DQ-iUJ" secondAttribute="centerY" id="j8v-eh-VaD"/>
+                                                <constraint firstAttribute="centerY" secondItem="hG7-ly-DFf" secondAttribute="centerY" id="rlw-lR-Qp9"/>
+                                                <constraint firstItem="hG7-ly-DFf" firstAttribute="leading" secondItem="txQ-Fk-AJj" secondAttribute="leadingMargin" constant="6" id="tRJ-ED-1I6"/>
+                                                <constraint firstItem="j7c-DQ-iUJ" firstAttribute="trailing" secondItem="txQ-Fk-AJj" secondAttribute="trailingMargin" constant="-24" id="wI1-8J-jRL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
