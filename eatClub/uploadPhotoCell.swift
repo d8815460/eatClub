@@ -12,6 +12,7 @@ class uploadPhotoCell: UITableViewCell {
 
     @IBOutlet var uploadPhotoView: UIImageView!
     
+    @IBOutlet var addPhotoButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

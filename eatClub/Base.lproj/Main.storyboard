@@ -1664,6 +1664,7 @@ It takes just 1 line of code per animation!</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addPhotoButton" destination="i9U-nh-5r6" id="nnt-W9-Ix0"/>
                                     <outlet property="uploadPhotoView" destination="yS8-18-SjQ" id="aRa-pi-hyZ"/>
                                 </connections>
                             </tableViewCell>

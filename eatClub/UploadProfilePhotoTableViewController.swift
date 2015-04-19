@@ -9,9 +9,11 @@
 import UIKit
 import MobileCoreServices
 
-class UploadProfilePhotoTableViewController: UITableViewController, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIAlertViewDelegate {
+class UploadProfilePhotoTableViewController: UITableViewController, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, UIPopoverControllerDelegate {
     
     @IBOutlet var nextButton: UIButton!
+    var picker:UIImagePickerController = UIImagePickerController()
+    var popover:UIPopoverController! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,17 +109,111 @@ class UploadProfilePhotoTableViewController: UITableViewController, UIImagePicke
         }
     }
     
+    
+    
+    // MARK: - UIImagePicker Delegate
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        
+        println("取得照片\(image)")
+        
+        var firstIndex:NSIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+        var cell:uploadPhotoCell! = self.tableView.cellForRowAtIndexPath(firstIndex) as! uploadPhotoCell
+        
+        //指定cell裡面的ImageView
+        cell.uploadPhotoView.image = image
+        cell.addPhotoButton.setTitle("", forState: .Normal)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    
+    
     @IBAction func uploadButtonPressed(sender: AnyObject) {
+        
+        /* Supports UIAlert Controller */
+        if( controllerAvailable()){
+            handleIOS8()
+        } else {
+            var actionSheet:UIActionSheet
+            if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+                actionSheet = UIActionSheet(title: "Hello this is IOS7", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil,otherButtonTitles:"從相簿選擇照片", "直接拍照")
+            } else {
+                actionSheet = UIActionSheet(title: "Hello this is IOS7", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil,otherButtonTitles:"從相簿選擇照片")
+            }
+            actionSheet.delegate = self
+            actionSheet.showInView(self.view)
+            /* Implement the delegate for actionSheet */
+        }
+        
+        
         let cameraDeviceAvailable: Bool = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         let photoLibraryAvailable: Bool = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
+    }
+    
+    func handleIOS8(){
         
-        if cameraDeviceAvailable && photoLibraryAvailable {
-            let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "拍張照片", "從相簿選擇")
-            actionSheet.showInView(self.view)
-        }else{
+        self.picker.editing = true
+        self.picker.delegate = self;
+        
+        let alert = UIAlertController(title: "開始上傳照片", message: "請選擇您照片的來源", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let libButton = UIAlertAction(title: "從相簿選擇照片", style: UIAlertActionStyle.Default) { (alert) -> Void in
+            
+            self.picker.allowsEditing = true
+            self.picker.delegate = self
+            self.picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(self.picker, animated: true, completion: nil)
+        }
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            let cameraButton = UIAlertAction(title: "直接拍照", style: UIAlertActionStyle.Default) { (alert) -> Void in
+                println("直接拍照")
+                self.picker.sourceType = UIImagePickerControllerSourceType.Camera
+                self.picker.allowsEditing = true
+                self.picker.showsCameraControls = true
+                self.picker.delegate = self
+                self.presentViewController(self.picker, animated: true, completion: nil)
+                
+            }
+            alert.addAction(cameraButton)
+        } else {
+            println("照相機不支援")
             
         }
+        let cancelButton = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (alert) -> Void in
+            println("Cancel Pressed")
+        }
+        
+        alert.addAction(libButton)
+        alert.addAction(cancelButton)
+        
+        /* Code for UIAlert View Controller
+        let alert = UIAlertController(title: "This is an alert!", message: "Using UIAlertViewController", preferredStyle: UIAlertControllerStyle.Alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (okSelected) -> Void in
+        println("Ok Selected")
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (cancelSelected) -> Void in
+        println("Cancel Selected")
+        }
+        alert.addAction(okButton)
+        alert.addAction(cancelButton)
+        */
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
+    
+    func controllerAvailable() -> Bool {
+        if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
     
     func shouldPresentPhotoCaptureController () -> Bool {
         var presentedPhotoCaptureController = self.shouldStartCameraController()
@@ -139,7 +235,7 @@ class UploadProfilePhotoTableViewController: UITableViewController, UIImagePicke
         
         let cameraUI = UIImagePickerController()
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) && UIImagePickerController.availableMediaTypesForSourceType(UIImagePickerControllerSourceType.Camera) != nil {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             
             cameraUI.mediaTypes = [kUTTypeImage]
             cameraUI.sourceType = UIImagePickerControllerSourceType.Camera
@@ -156,20 +252,70 @@ class UploadProfilePhotoTableViewController: UITableViewController, UIImagePicke
         cameraUI.allowsEditing = true
         cameraUI.showsCameraControls = true
         cameraUI.delegate = self
-        
-        #if TARGET_OS_IPHONE &&  (__IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0)
+
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
             self.presentViewController(cameraUI, animated: true, completion: nil)
-        #else
-//            [self, presentModalViewController:cameraUI animated:YES];
-        #endif
+        }else{
+//            popover = UIPopoverController(contentViewController: picker)
+        }
         
         return true
     }
-    
     
     func shouldStartPhotoLibraryPickerController () -> Bool {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) == false && UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum) == false {
+            return false
+        }
+        
+        let cameraUI = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            
+            cameraUI.mediaTypes = [kUTTypeImage]
+            cameraUI.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            
+        }else if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum) {
+            
+            cameraUI.mediaTypes = [kUTTypeImage]
+            cameraUI.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+            
+        }
+        
+        cameraUI.allowsEditing = true
+        cameraUI.delegate = self
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            self.presentViewController(cameraUI, animated: true, completion: nil)
+        }else{
+            //            popover = UIPopoverController(contentViewController: picker)
+        }
+        
         return true
     }
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        
+        println("Title : \(actionSheet.buttonTitleAtIndex(buttonIndex))")
+        println("Button Index : \(buttonIndex)")
+        
+        picker.editing = false
+        picker.delegate = self;
+        if( buttonIndex == 1){
+            picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.picker.allowsEditing = true
+            self.picker.delegate = self
+        } else if(buttonIndex == 2){
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            self.picker.allowsEditing = true
+            self.picker.showsCameraControls = true
+            self.picker.delegate = self
+        } else {
+            
+        }
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
