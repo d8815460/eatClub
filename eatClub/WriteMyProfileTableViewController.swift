@@ -68,15 +68,11 @@ class WriteMyProfileTableViewController: UITableViewController, UITextFieldDeleg
             
         }else if textField.tag == 101 {
             //跳下一個，職業
-            firstNameField.resignFirstResponder()
             workField.becomeFirstResponder()
             
         }else if textField.tag == 102 {
             //跳居住地，選擇模式，等同於選擇 table cell = index 3
             workField.resignFirstResponder()
-            let index3 = NSIndexPath(forRow: 0, inSection: 3)
-            tableView(self.tableView, didSelectRowAtIndexPath: index3)
-            
             nextButton.hidden = false
             
         }
@@ -84,6 +80,9 @@ class WriteMyProfileTableViewController: UITableViewController, UITextFieldDeleg
         return true
     }
     
+    @IBAction func nextButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("uploadProfilePhoto", sender: self)
+    }
     
 
     // MARK: - Table view data source

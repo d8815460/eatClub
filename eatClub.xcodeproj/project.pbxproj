@@ -38,6 +38,7 @@
 		DBBCA1791ADE9526002D27CE /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBCA1781ADE9526002D27CE /* libstdc++.6.dylib */; };
 		DBD1DCE81AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD1DCE71AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift */; };
 		FA04B2FD1AC2BD260033AB2A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA04B2FC1AC2BD260033AB2A /* Social.framework */; };
+		FA1DF7FA1AE3904D00152484 /* uploadPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DF7F91AE3904D00152484 /* uploadPhotoCell.swift */; };
 		FA880ED41ADD006400E6E8ED /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA880ED31ADD006400E6E8ED /* SignUpViewController.swift */; };
 		FAAF426A1ABFE2FD0005515B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF42691ABFE2FD0005515B /* AppDelegate.swift */; };
 		FAAF426D1ABFE2FD0005515B /* eatClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAAF426B1ABFE2FD0005515B /* eatClub.xcdatamodeld */; };
@@ -105,6 +106,7 @@
 		DBBCA1781ADE9526002D27CE /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		DBD1DCE71AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMyProfileTableViewController.swift; sourceTree = "<group>"; };
 		FA04B2FC1AC2BD260033AB2A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FA1DF7F91AE3904D00152484 /* uploadPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadPhotoCell.swift; sourceTree = "<group>"; };
 		FA880ED31ADD006400E6E8ED /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FAAF42641ABFE2FD0005515B /* eatClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAF42681ABFE2FD0005515B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				DB09F5061AE3165200E30419 /* UploadProfilePhotoTableViewController.swift */,
+				FA1DF7F91AE3904D00152484 /* uploadPhotoCell.swift */,
 			);
 			name = "0.5上傳大頭照";
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				DB5B94CD1AD4D90F00E297D6 /* DRDynamicSlideShow.m in Sources */,
 				DB0FC4671AD61EA4003CD064 /* PictureListViewController.swift in Sources */,
 				DB0074CB1AD544570060CFA3 /* RMParallax.swift in Sources */,
+				FA1DF7FA1AE3904D00152484 /* uploadPhotoCell.swift in Sources */,
 				DB0074FF1AD54D630060CFA3 /* IntroViewController.swift in Sources */,
 				DBD1DCE81AE1D87B00F4FD3F /* WriteMyProfileTableViewController.swift in Sources */,
 				DB0074CA1AD544570060CFA3 /* RMParallaxItem.swift in Sources */,

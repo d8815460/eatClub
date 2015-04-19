@@ -188,6 +188,20 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: - 註冊功能
     @IBAction func signUpWithUsernameAndPasswordPressed(sender: AnyObject) {
+        if count(userTextField.text!) > 10 || count(userTextField.text!) < 10 || !userTextField.text.hasPrefix("09"){
+            let alertController = UIAlertController(title: "註冊時發生錯誤",
+                message: "行動電話格式錯誤",
+                preferredStyle: UIAlertControllerStyle.Alert
+            )
+            alertController.addAction(UIAlertAction(title: "確定",
+                style: UIAlertActionStyle.Default,
+                handler: nil)
+            )
+            // Display alert
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
+        
         
         // Build the terms and conditions alert
         let alertController = UIAlertController(title: "同意的條款和條件",

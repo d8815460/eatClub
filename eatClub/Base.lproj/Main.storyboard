@@ -456,7 +456,8 @@ It takes just 1 line of code per animation!</string>
                                     <constraint firstAttribute="height" constant="30" id="K2p-Fl-G74"/>
                                     <constraint firstAttribute="width" constant="30" id="wR4-84-Jcg"/>
                                 </constraints>
-                                <state key="normal" image="close_button">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="⊗">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -549,7 +550,8 @@ It takes just 1 line of code per animation!</string>
                                     <constraint firstAttribute="width" constant="30" id="jjS-xR-J8X"/>
                                     <constraint firstAttribute="height" constant="30" id="rRa-iO-eAJ"/>
                                 </constraints>
-                                <state key="normal" image="close_button">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="⊗">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -795,7 +797,8 @@ It takes just 1 line of code per animation!</string>
                                     <constraint firstAttribute="height" constant="30" id="hvB-k4-aoN"/>
                                     <constraint firstAttribute="width" constant="30" id="i22-Kz-9F4"/>
                                 </constraints>
-                                <state key="normal" image="close_button">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="⊗">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1211,6 +1214,9 @@ It takes just 1 line of code per animation!</string>
                             <state key="normal" title="下一步">
                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="5fV-90-Pzg" eventType="touchUpInside" id="l43-Ay-ejK"/>
+                            </connections>
                         </button>
                         <sections>
                             <tableViewSection id="fPn-pp-dBY">
@@ -1584,75 +1590,100 @@ It takes just 1 line of code per animation!</string>
         <scene sceneID="b7d-4a-Izs">
             <objects>
                 <tableViewController id="ggf-ep-ndf" customClass="UploadProfilePhotoTableViewController" customModule="eatClub" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mV9-bk-9wa">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mV9-bk-9wa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="uFp-ET-UXe">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="202" id="bjw-Eu-uuZ">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bjw-Eu-uuZ" id="0UR-KD-MNk">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大頭貼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-cQ-b7o">
-                                                    <rect key="frame" x="22" y="14" width="570" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="BWE-EW-uhd"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-18-SjQ">
-                                                    <rect key="frame" x="22" y="43" width="120" height="120"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="PzQ-NP-rU2"/>
-                                                        <constraint firstAttribute="height" constant="120" id="kYD-X0-pvW"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9U-nh-5r6">
-                                                    <rect key="frame" x="22" y="43" width="120" height="120"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                                    <state key="normal" title="⊕">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請上傳五官清晰的照片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-HU-4Or">
-                                                    <rect key="frame" x="22" y="171" width="570" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="acL-8t-kmi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fh6-8m-nge">
+                            <rect key="frame" x="0.0" y="562" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.67840140660000003" green="0.80169417870000004" blue="0.88638336490000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="完成">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="5fV-90-Pzg" eventType="touchUpInside" id="FGZ-C0-8Rk"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="202" id="bjw-Eu-uuZ" customClass="uploadPhotoCell" customModule="eatClub" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bjw-Eu-uuZ" id="0UR-KD-MNk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大頭貼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-cQ-b7o">
+                                            <rect key="frame" x="8" y="14" width="584" height="21"/>
                                             <constraints>
-                                                <constraint firstItem="9ng-HU-4Or" firstAttribute="top" secondItem="yS8-18-SjQ" secondAttribute="bottom" constant="8" id="2zy-pf-ydb"/>
-                                                <constraint firstItem="i9U-nh-5r6" firstAttribute="top" secondItem="bm3-cQ-b7o" secondAttribute="bottom" constant="8" id="GEH-fP-uS0"/>
-                                                <constraint firstItem="bm3-cQ-b7o" firstAttribute="trailing" secondItem="0UR-KD-MNk" secondAttribute="trailingMargin" id="IFO-lL-u5d"/>
-                                                <constraint firstItem="yS8-18-SjQ" firstAttribute="top" secondItem="bm3-cQ-b7o" secondAttribute="bottom" constant="8" id="LDC-te-adS"/>
-                                                <constraint firstItem="i9U-nh-5r6" firstAttribute="width" secondItem="yS8-18-SjQ" secondAttribute="width" id="Mhm-Er-KWC"/>
-                                                <constraint firstItem="bm3-cQ-b7o" firstAttribute="top" secondItem="0UR-KD-MNk" secondAttribute="topMargin" constant="6" id="PcO-yP-Cj6"/>
-                                                <constraint firstItem="bm3-cQ-b7o" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" constant="14" id="Rhj-WE-fUz"/>
-                                                <constraint firstItem="9ng-HU-4Or" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" constant="14" id="ccJ-cE-pAg"/>
-                                                <constraint firstItem="yS8-18-SjQ" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" constant="14" id="jqD-Cl-17L"/>
-                                                <constraint firstItem="i9U-nh-5r6" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" constant="14" id="q3t-SV-6JJ"/>
-                                                <constraint firstItem="i9U-nh-5r6" firstAttribute="height" secondItem="yS8-18-SjQ" secondAttribute="height" id="sz3-mM-ArD"/>
-                                                <constraint firstItem="9ng-HU-4Or" firstAttribute="trailing" secondItem="0UR-KD-MNk" secondAttribute="trailingMargin" id="tze-Ro-vcS"/>
+                                                <constraint firstAttribute="height" constant="21" id="BWE-EW-uhd"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-18-SjQ">
+                                            <rect key="frame" x="22" y="43" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="PzQ-NP-rU2"/>
+                                                <constraint firstAttribute="height" constant="120" id="kYD-X0-pvW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9U-nh-5r6">
+                                            <rect key="frame" x="22" y="43" width="120" height="120"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                            <state key="normal" title="⊕">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="uploadButtonPressed:" destination="ggf-ep-ndf" eventType="touchUpInside" id="72h-lU-Toq"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請上傳五官清晰的照片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-HU-4Or">
+                                            <rect key="frame" x="8" y="171" width="584" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="acL-8t-kmi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9ng-HU-4Or" firstAttribute="top" secondItem="yS8-18-SjQ" secondAttribute="bottom" constant="8" id="2zy-pf-ydb"/>
+                                        <constraint firstItem="i9U-nh-5r6" firstAttribute="top" secondItem="bm3-cQ-b7o" secondAttribute="bottom" constant="8" id="GEH-fP-uS0"/>
+                                        <constraint firstItem="bm3-cQ-b7o" firstAttribute="trailing" secondItem="0UR-KD-MNk" secondAttribute="trailingMargin" id="IFO-lL-u5d"/>
+                                        <constraint firstItem="yS8-18-SjQ" firstAttribute="top" secondItem="bm3-cQ-b7o" secondAttribute="bottom" constant="8" id="LDC-te-adS"/>
+                                        <constraint firstItem="i9U-nh-5r6" firstAttribute="width" secondItem="yS8-18-SjQ" secondAttribute="width" id="Mhm-Er-KWC"/>
+                                        <constraint firstItem="bm3-cQ-b7o" firstAttribute="top" secondItem="0UR-KD-MNk" secondAttribute="topMargin" constant="6" id="PcO-yP-Cj6"/>
+                                        <constraint firstItem="bm3-cQ-b7o" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" id="Rhj-WE-fUz"/>
+                                        <constraint firstItem="9ng-HU-4Or" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" id="ccJ-cE-pAg"/>
+                                        <constraint firstItem="yS8-18-SjQ" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" constant="14" id="jqD-Cl-17L"/>
+                                        <constraint firstItem="i9U-nh-5r6" firstAttribute="leading" secondItem="0UR-KD-MNk" secondAttribute="leadingMargin" constant="14" id="q3t-SV-6JJ"/>
+                                        <constraint firstItem="i9U-nh-5r6" firstAttribute="height" secondItem="yS8-18-SjQ" secondAttribute="height" id="sz3-mM-ArD"/>
+                                        <constraint firstItem="9ng-HU-4Or" firstAttribute="trailing" secondItem="0UR-KD-MNk" secondAttribute="trailingMargin" id="tze-Ro-vcS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="uploadPhotoView" destination="yS8-18-SjQ" id="aRa-pi-hyZ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="nDq-on-072">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDq-on-072" id="dRx-j7-B7b">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="ggf-ep-ndf" id="q7U-ZP-zaI"/>
                             <outlet property="delegate" destination="ggf-ep-ndf" id="4jI-RU-WSK"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="nextButton" destination="fh6-8m-nge" id="J50-EQ-stm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGv-Ri-gbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1684,7 +1715,6 @@ It takes just 1 line of code per animation!</string>
     </scenes>
     <resources>
         <image name="Stars" width="320" height="568"/>
-        <image name="close_button" width="30" height="30"/>
         <image name="list" width="22" height="22"/>
         <image name="magic_stick" width="139" height="138"/>
         <image name="menu" width="22" height="22"/>
