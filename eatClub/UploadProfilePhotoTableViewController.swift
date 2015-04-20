@@ -319,7 +319,8 @@ class UploadProfilePhotoTableViewController: UITableViewController, UIImagePicke
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
+        // Return NO 
+    if you do not want the specified item to be editable.
         return true
     }
     */
