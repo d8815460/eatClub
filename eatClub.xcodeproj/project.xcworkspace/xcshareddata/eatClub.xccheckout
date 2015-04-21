@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>58E4F280-50ED-4DCC-BBB3-D048AFE2C589</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>eatClub</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>00B7CBFAD27F499D45056D7E836EC48A45EB7525</key>
 		<string>github.com:d8815460/eatClub.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>eatClub.xcodeproj/project.xcworkspace</string>
+	<string>eatClub.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>00B7CBFAD27F499D45056D7E836EC48A45EB7525</key>
